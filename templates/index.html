@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+</head>
+<body>
+    <center><h1>mydaily checkout</h1></center>
+    <form action="/base" method="post">
+        <input type="text" name="c_name">
+        <button type="submit">Add</button>
+    </form>
+
+    {% if c_name %}
+        <p>Recent Task Added: {{ c_name }}</p>
+    {% endif %}
+
+    <center><h1>Added Task</h1></center>
+    {% for i in my_list %}
+    {{i.c_id}} | {{i.c_name}}<br><a href="/delete/{{i.c_id}}">Delete</a><br><br>
+    {% endfor %}
+    <button type="submit">Delete</button>
+</body>
+</html>
