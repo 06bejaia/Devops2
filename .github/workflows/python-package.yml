@@ -14,9 +14,15 @@ jobs:
 
     runs-on: ubuntu-latest
     strategy:
+     
    
       matrix:
+        platform: [ubuntu-latest,windows-latest,macos-latest]
         python-version: ["3.9", "3.10", "3.11"]
+
+    
+    
+    runs-on: ${{ matrix.platform }}
 
     steps:
     - uses: actions/checkout@v3
