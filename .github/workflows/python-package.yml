@@ -41,3 +41,10 @@ jobs:
         pytest testy.py
     - name: check if docker is instaled
       run: docker run hello-world
+    - name: push to docker Hub
+      uses: docker/build-push-action@v5.1.0
+      with:
+        username: ${{secrets.DOCKERHUB_USERNAME}}
+        password: ${{secrets.DOCKERHUB_TOKEN}}
+        repository: docker push danios06/devops
+        tag_with_ref: true
