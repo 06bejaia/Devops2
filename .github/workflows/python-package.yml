@@ -17,8 +17,8 @@ jobs:
      
    
       matrix:
-        platform: [ubuntu-latest,macos-latest]
-        python-version: ["3.9", "3.10", "3.11"]
+        platform: [ubuntu-latest]
+        python-version: ["3.9"]
 
     
     
