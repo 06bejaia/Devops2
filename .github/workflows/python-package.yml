@@ -39,3 +39,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest testy.py
+    - name: check if docker is instaled
+      run: docker run hello-world
